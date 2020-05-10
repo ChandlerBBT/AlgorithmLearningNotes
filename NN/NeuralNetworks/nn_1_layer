@@ -1,0 +1,17 @@
+# 经典的单层神经网络
+# 代码来源百度飞桨课程
+
+import numpy as np
+
+
+class Network(object):
+    def __init__(self, num_of_weights):
+        # 随机产生w的初始值
+        self.w = np.random.randn(num_of_weights, 1)
+        self.b = 0.
+        
+	def forward(self, x):
+		z = np.dot(x, self.w) + self.b
+		return z
+
+
